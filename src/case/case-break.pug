@@ -1,0 +1,10 @@
+//- 在某些情况下，如果您不想输出任何东西的话，您可以明确地加上一个原生的 break 语句：
+
+- var friends = 0
+case friends
+    when 0
+        - break
+    when 1
+        p 您的朋友很少
+    default
+        p 您有 #{friends} 个朋友

@@ -1,0 +1,16 @@
+p 可以在一行里同时指定多个过滤器来对一个文本块进行处理。文本首先被传递到最后的过滤器，然后它的结果会被传到倒数第二个过滤器作为输入，以此类推。
+|
+|
+script
+  :cdata-js:babel(presets=['es2015'])
+    const myFunc = () => `这是一行在 CD${'ATA'} 里的 ECMAScript 2015 代码`;
+script
+  :cdata:uglify-js
+    (function() {
+      console.log('test')
+    })()
+script
+  :cdata:uglify-js:coffee-script
+    (->
+      console.log 'test'
+    )()

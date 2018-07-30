@@ -1,0 +1,6 @@
+//- page.pug
+extends layout2.pug
+//- 当使用 block append 或者 block prepend 时，block 关键字是可省略的：
+block append head
+  script(src='/vendor/three.js')
+  script(src='/game.js')

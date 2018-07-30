@@ -1,0 +1,14 @@
+//- 纯文本块: 在标签后面紧接一个点 .，在标签有属性的时候，则是紧接在闭括号后面。在标签和点之间不要有空格。块内的纯文本内容必须缩进一层
+
+script.
+  if (usingPug)
+    console.log('这是明智的选择。')
+  else
+    console.log('请用 Pug。')
+
+//- 您也可以在父块内，创建一个“点”块，跟在某个标签的后面。
+div
+  p This text belongs to the paragraph tag.
+  br
+  .
+    This text belongs to the div tag.

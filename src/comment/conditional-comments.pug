@@ -1,0 +1,18 @@
+p.
+    Pug does not have any special syntax for conditional comments. (Conditional comments are a peculiar method of adding fallback markup for old versions of Internet Explorer.)
+    However, since all lines beginning with < are treated as plain text, normal HTML-style conditional comments work just fine.
+|
+|
+doctype html
+
+<!--[if IE 8]>
+<html lang="en" class="lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+body
+    p Supporting old web browsers is a pain.
+
+</html>

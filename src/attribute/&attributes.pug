@@ -1,0 +1,11 @@
+//- 危险:使用 &attributes 赋值的属性并不会经过自动转义过程。您必须正确处理和过滤用户的输入来避免跨站脚本攻击(XSS)。 但是如果您是从一个 mixin 调用中使用 attributes 的话，这个过程就是自动的。
+
+//- 读作 “and attributes”，&attributes 语法可以将一个对象转化为一个元素的属性列表。
+
+div#foo(data-bar='foo')&attributes({'data-foo': 'bar'})
+|
+|
+//- 这个对象不一定必须是一个字面值，它同样也可以是一个包含值的对象（参见 Mixin 属性）。
+- var attributes = {};
+- attributes.class = 'baz';
+div#foo2(data-bar='foo')&attributes(attributes)

@@ -1,0 +1,14 @@
+- var classes = ['foo', 'bar', 'baz']
+a(class=classes)
+|
+|
+//- the class attribute may also be repeated to merge arrays
+//- 也可以通过重复class属性来合并数组
+a.bang(class=classes class=['bing'])
+
+//- 它还可以是一个将类名映射为 true 或 false 的对象，这在使用条件性的类的时候非常有用。
+- var currentUrl = '/about'
+a(href='/' class={active: currentUrl === '/'}) Home
+|
+|
+a(class={active: currentUrl === '/about'} href='/about') About

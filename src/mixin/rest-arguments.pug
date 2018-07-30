@@ -1,0 +1,8 @@
+//- 您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
+
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+
++list('my-list', 1, 2, 3, 4)
